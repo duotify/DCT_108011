@@ -10,11 +10,11 @@ export class AppComponent {
   keyword = '';
 
   setKeyword($event: KeyboardEvent) {
-    var input_dom = $event.target as HTMLInputElement;
-    this.keyword = input_dom.value;
+    const inputDom = $event.target as HTMLInputElement;
+    this.keyword = inputDom.value;
   }
 
-  clearKeyword(input_dom: HTMLInputElement) {
+  clearKeyword() {
     this.keyword = '';
   }
 }

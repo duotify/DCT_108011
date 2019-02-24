@@ -175,7 +175,7 @@
         <div class="widget search">
           <div class="widget-content">
             <div id="searchbox">
-              <input type="text" [(ngModel)]="keyword" placeholder="請輸入搜尋關鍵字" accesskey="s" (keyup.escape)="clearKeyword($event.target)" />
+              <input type="text" [(ngModel)]="keyword" placeholder="請輸入搜尋關鍵字" accesskey="s" (keyup.escape)="clearKeyword()" />
               <input type="button" value="搜尋" id="searchbutton" />
               <br>{{ keyword }}
             </div>
