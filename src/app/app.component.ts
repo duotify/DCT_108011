@@ -13,9 +13,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     fetch('/api/articles.json').then((res) => {
-      res.json().then((value) => {
-        this.data = value;
-      });
+      return res.json();
+    }).then((value) => {
+      this.data = value;
     });
   }
   setKeyword($event: KeyboardEvent) {
