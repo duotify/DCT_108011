@@ -16,8 +16,11 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  setSiteName() {
-    this.sitename = 'The Will Will Web';
+  setSiteName($event: MouseEvent) {
+    if ($event.ctrlKey) {
+      console.log($event);
+      this.sitename = 'The Will Will Web';
+    }
   }
 
 }
