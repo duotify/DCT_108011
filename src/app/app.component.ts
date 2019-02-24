@@ -17,4 +17,8 @@ export class AppComponent {
   clearKeyword() {
     this.keyword = '';
   }
+
+  doSearch(val: string) {
+    console.log(val);
+  }
 }
