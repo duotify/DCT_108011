@@ -41,7 +41,7 @@
         <h1><a href="http://blog.miniasp.com/">{{ sitename }}</a></h1>
         <h3 [innerHTML]="subtitle" (click)="setCounter($event)" (contextmenu)="setCounter($event, -1)"
           [class.highlight]="isHighlight()"
-          [style.font-size.px]="counter + 12"></h3> {{counter}}
+          [style.font-size.px]="counter + 12"></h3> NT${{ counter + 1000 | number }}
       </div>
 
       <div *ngIf="counter % 2 == 0" id="social-icons" class="pull-right social-icon">
