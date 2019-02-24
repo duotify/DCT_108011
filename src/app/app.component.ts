@@ -16,6 +16,5 @@ export class AppComponent {
 
   clearKeyword(input_dom: HTMLInputElement) {
     this.keyword = '';
-    input_dom.value = '';
   }
 }
