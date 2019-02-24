@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -12,9 +13,8 @@ export class AppComponent implements OnInit {
   data = [];
 
   ngOnInit(): void {
-    fetch('/api/articles.json')
-      .then(res => res.json())
-      .then(value => {
+    from(fetch('/api/articles.json').then(res => res.json()))
+      .subscribe(value => {
         this.data = value;
       });
   }
