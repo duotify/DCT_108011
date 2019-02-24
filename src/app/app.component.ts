@@ -12,11 +12,11 @@ export class AppComponent implements OnInit {
   data = [];
 
   ngOnInit(): void {
-    fetch('/api/articles.json').then((res) => {
-      return res.json();
-    }).then((value) => {
-      this.data = value;
-    });
+    fetch('/api/articles.json')
+      .then(res => res.json())
+      .then(value => {
+        this.data = value;
+      });
   }
   setKeyword($event: KeyboardEvent) {
     const inputDom = $event.target as HTMLInputElement;
