@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   sitename = 'Hello';
   sitelogo = '/assets/images/logo.png';
   subtitle = '記載著 <mark>Will</mark> 在網路世界的學習心得與技術分享';
+  counter = 0;
 
   constructor() { }
 
@@ -23,4 +24,11 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  setCounter() {
+    this.counter++;
+  }
+
+  isHighlight() {
+    return this.counter % 2 === 0;
+  }
 }
