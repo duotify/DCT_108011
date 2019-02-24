@@ -7,7 +7,7 @@
       <div id="ctl00_cphBody_divError"></div>
       <div id="ctl00_cphBody_PostList1_posts" class="posts">
         <!-- Article START-->
-        <article *ngFor="let item of data" class="post" id="post0">
+        <article *ngFor="let item of data; let idx = index" class="post" id="post{{idx}}">
           <header class="post-header">
             <h2 class="post-title">
               <a
