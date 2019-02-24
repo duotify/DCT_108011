@@ -30,4 +30,8 @@ export class AppComponent implements OnInit {
   doSearch(val: string) {
     console.log(val);
   }
+
+  deleteArticle(postId: number) {
+    console.log(`你刪除編號 ${postId} 的文章!`);
+  }
 }

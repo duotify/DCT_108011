@@ -7,7 +7,10 @@
       <div id="ctl00_cphBody_divError"></div>
       <div id="ctl00_cphBody_PostList1_posts" class="posts">
         <!-- Article START-->
-        <app-article *ngFor="let item of data; let idx = index" [idx]="idx" [item]="item"></app-article>
+        <app-article *ngFor="let item of data; let idx = index"
+          [idx]="idx" [item]="item"
+          (delete)="deleteArticle($event)"
+          ></app-article>
         <!-- Article END-->
       </div>
     </section>

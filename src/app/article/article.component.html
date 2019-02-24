@@ -17,6 +17,7 @@
         ><i class="glyphicon glyphicon-folder-close"></i
         ><a [href]="item['category-link']">{{ item.category }}</a></span
       >
+      <button (click)="doDelete()">刪除文章</button>
     </div>
   </header>
   <section class="post-body text" [innerHTML]="item.summary"></section>
