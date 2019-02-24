@@ -14,10 +14,8 @@ export class AppComponent {
     this.keyword = input_dom.value;
   }
 
-  clearKeyword($event: KeyboardEvent) {
-    if ($event.key == 'Escape') {
-      this.keyword = '';
-      (<HTMLInputElement>$event.target).value = '';
-    }
+  clearKeyword(input_dom: HTMLInputElement) {
+    this.keyword = '';
+    input_dom.value = '';
   }
 }
