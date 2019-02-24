@@ -24,8 +24,9 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  setCounter() {
-    this.counter++;
+  setCounter($event: MouseEvent, inc = 1) {
+    this.counter += inc;
+    $event.preventDefault();
   }
 
   isHighlight() {
